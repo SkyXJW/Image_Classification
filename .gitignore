@@ -25,5 +25,5 @@ runs/
 
 .kiro/
 .hypothesis/
-outputs/
+outputs/*.pth
 # cifar-10-batches-py/
