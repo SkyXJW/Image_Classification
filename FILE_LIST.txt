@@ -1,0 +1,60 @@
+CIFAR-10 CNN 项目文件清单
+==========================
+
+核心Python模块:
+--------------
+model.py                    - CNN模型定义（ResidualBlock + CIFAR10CNN）
+data_loader.py              - CIFAR-10数据加载和预处理
+trainer.py                  - 分布式训练器（DDP + AMP）
+train.py                    - 主训练脚本
+visualize.py                - 训练曲线可视化
+
+配置文件:
+---------
+requirements.txt            - Python依赖包列表
+
+启动脚本:
+---------
+setup_env.sh                - Conda环境创建脚本
+train_distributed.sh        - 8 GPU分布式训练启动脚本
+train_single_gpu.sh         - 单GPU训练脚本
+
+文档:
+-----
+README.md                   - 完整的项目文档
+PROJECT_SUMMARY.md          - 项目总结
+FILE_LIST.txt               - 本文件清单
+
+规格文档 (.kiro/specs/cifar10-cnn-classifier/):
+-----------------------------------------------
+requirements.md             - 需求文档
+design.md                   - 设计文档
+tasks.md                    - 任务列表
+
+数据目录:
+---------
+cifar-10-batches-py/        - CIFAR-10数据集目录
+  ├── data_batch_1          - 训练数据批次1
+  ├── data_batch_2          - 训练数据批次2
+  ├── data_batch_3          - 训练数据批次3
+  ├── data_batch_4          - 训练数据批次4
+  ├── data_batch_5          - 训练数据批次5
+  ├── test_batch            - 测试数据
+  └── batches.meta          - 元数据
+
+输出目录 (训练后生成):
+---------------------
+outputs/                    - 训练输出目录
+  ├── cifar10_cnn_best.pth  - 最佳模型权重
+  ├── cifar10_cnn_latest.pth - 最新模型权重
+  └── training_curves.png   - 训练曲线图
+
+总计:
+-----
+- Python模块: 5个
+- Shell脚本: 3个
+- 配置文件: 1个
+- 文档文件: 3个
+- 规格文档: 3个
+
+所有测试文件已删除，项目已整理完毕。
